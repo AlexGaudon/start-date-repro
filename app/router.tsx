@@ -5,7 +5,7 @@ import { routeTree } from "./routeTree.gen";
 export function createRouter() {
   const router = createTanStackRouter({
     routeTree,
-    transformer: new SuperJSON(),
+    transformer: SuperJSON,
   });
 
   return router;
