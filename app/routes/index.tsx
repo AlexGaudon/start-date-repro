@@ -1,4 +1,4 @@
-import { createFileRoute, useRouter } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/start";
 
 const filePath = "count.txt";
@@ -17,7 +17,6 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const router = useRouter();
   const state = Route.useLoaderData();
 
   return (

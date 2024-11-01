@@ -1,9 +1,11 @@
 import { createRouter as createTanStackRouter } from "@tanstack/react-router";
+import SuperJSON from "superjson";
 import { routeTree } from "./routeTree.gen";
 
 export function createRouter() {
   const router = createTanStackRouter({
     routeTree,
+    transformer: new SuperJSON(),
   });
 
   return router;
